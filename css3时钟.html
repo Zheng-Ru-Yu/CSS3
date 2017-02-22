@@ -49,6 +49,7 @@
 			left: 148px;
 			top: 80px;
 			-webkit-transform-origin:bottom;
+			/* 省略*/
 		}
 		#second{
 			width: 2px;
@@ -58,6 +59,7 @@
 			left: 149px;
 			top: 50px;
 			-webkit-transform-origin:bottom;
+			/* 省略*/
 		}
 		.number{
 			font-size: 30px;
@@ -83,8 +85,8 @@
 		(function(){
 			var oLine=document.getElementById('line');
 			var html='';
-			for (var i = 0; i <= 60; i++) {
-				// 外层单引号内层双引号 双引号内必须单引号
+			for (var i = 0; i <= 60; i++) {//小短线				
+			// 外层单引号内层双引号 双引号内必须单引号
 				html+='<li style="-webkit-transform: rotate('+ i*6 +'deg)"></li>';
 			}
 			oLine.innerHTML=html;
@@ -92,7 +94,7 @@
 
 			var aLi = document.getElementsByTagName("li");
 			var j=1;
-			for(var i=5; i<aLi.length; i+=5){
+			for(var i=5; i<aLi.length; i+=5){//加数字				
 				aLi[i].innerHTML='<span>'+j+'</span>';
 				j++;
 			}
@@ -106,10 +108,10 @@
 
 			
 			function run(){
-				var d =new Date();
+				var d =new Date();//获取当前时间	
 				var hour=d.getHours();
 				var minute=d.getMinutes();
-				var second=d.getSeconds();
+				var second=d.getSeconds();			
 				var oSecond =document.getElementById('second');
 				var oMinute =document.getElementById('minute');
 				var oHour =document.getElementById('hour');
